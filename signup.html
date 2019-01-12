@@ -26,7 +26,7 @@
     <body>
     	<!-- Navigation Bar Template -->
     	<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-    		<a href="#" class="navbar-brand">Mental Health Planner</a>
+    		<a href="#" class="navbar-brand">Mental Health Journal</a>
     		<button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
     			<span class="navbar-toggler-icon"></span>
     		</button>
@@ -76,7 +76,7 @@
 				<div class="col">
                     <br>
 					<h1 class="text-center">Signup</h1>
-                    <h3 class="text-center">Your first step</h3>
+                    <h3 class="text-center">Your first step to mental wellness</h3>
                     <br>
 				</div>
 			</div>
@@ -108,6 +108,10 @@
     				</div>
     			</div>
     		</div>
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="text" name="age" id="age" class="form-control">
+            </div>
     		<div class="form-group">
     			<label for="username">Username</label>
     			<input type="text" name="username" id="username" class="form-control">
@@ -123,6 +127,21 @@
     				<option value="female">Female</option>
     			</select>
     		</div>
+            <div class="form-group">
+                <label for="stresses">What types of stress do you face?</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                    <label class="form-check-label" for="exampleRadios1">
+                        School
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                    <label class="form-check-label" for="exampleRadios1">
+                        Test
+                  </label>
+                </div>
+            </div>
     		<div class="form-check">
     			<input type="checkbox" id="accept-terms" class="form-check-input">
     			<label for="accept-terms" class="form-check-label">Accept Terms &amp; Conditions</label>
