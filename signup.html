@@ -6,6 +6,7 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous"> -->
 	    <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="styles.css">
 	    <style>
 	    	body{
 	    		margin: 30px;
@@ -89,16 +90,12 @@
 		</div>
 
     	<!-- Form Template -->
-    	<form action="" class="main-form needs-validation" novalidate>
+    	<form action="" class="main-form" novalidate>
     		<div class="row">
     			<div class="col">
     				<div class="form-group">
     					<label for="firstname">First Name</label>
-    					<!-- If input is invalid -->
     					<input type="text" name="username" id="username" class="form-control" required>
-    					<div class="invalid-feedback">Error. Please enter a valid username!</div>
-    					<!-- If input is valid -->
-    					<div class="valid-feedback">Looks good!</div>
     				</div>
     			</div>
     			<div class="col">
@@ -113,8 +110,8 @@
                 <input type="text" name="age" id="age" class="form-control">
             </div>
     		<div class="form-group">
-    			<label for="username">Username</label>
-    			<input type="text" name="username" id="username" class="form-control">
+    			<label for="email">Email</label>
+    			<input type="text" name="email" id="email" class="form-control">
     		</div>
     		<div class="form-group">
     			<label for="password">Password</label>
@@ -127,20 +124,139 @@
     				<option value="female">Female</option>
     			</select>
     		</div>
+           <!--  <div class="form-group">
+               <label for="stresses">What are you affected by?</label>
+               <select multiple class="form-control" id="stresses">
+                   <option>Anxiety</option>
+                   <option>Mood Disorder</option>
+                   <option>Eating Disorder</option>
+                   <option>Psychotic Disorder</option>
+                   <option>Personality Disorder</option>
+               </select>
+           </div> -->
+            <label for="stresses">Rate how heavily you're affected by the following disorders:</label>
+            <div class="form-check">
+                <label class="stress-headers" for="anxiety">Anxiety:</label>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="anxiety1" value="anxiety1">
+                    <label class="form-check-label" for="inlineRadio1">1</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="anxiety2" value="anxiety2">
+                    <label class="form-check-label" for="inlineRadio1">2</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="anxiety3" value="anxiety3">
+                    <label class="form-check-label" for="inlineRadio1">3</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="anxiety4" value="anxiety4">
+                    <label class="form-check-label" for="inlineRadio1">4</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="anxiety5" value="anxiety5">
+                    <label class="form-check-label" for="inlineRadio1">5</label>
+                </div>
+            </div>
+            <div class="form-check">
+                <label class="stress-headers" for="mood">Mood:</label>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="mood1" value="mood1">
+                    <label class="form-check-label" for="inlineRadio2">1</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="mood2" value="mood2">
+                    <label class="form-check-label" for="inlineRadio2">2</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="mood3" value="mood3">
+                    <label class="form-check-label" for="inlineRadio2">3</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="mood4" value="mood4">
+                    <label class="form-check-label" for="inlineRadio2">4</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="mood5" value="mood5">
+                    <label class="form-check-label" for="inlineRadio2">5</label>
+                </div>
+            </div>
+            <div class="form-check">
+                <label class="stress-headers" for="eating">Eating:</label>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="eating1" value="eating1">
+                    <label class="form-check-label" for="inlineRadio3">1</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="eating2" value="eating2">
+                    <label class="form-check-label" for="inlineRadio3">2</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="eating3" value="eating3">
+                    <label class="form-check-label" for="inlineRadio3">3</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="eating4" value="eating4">
+                    <label class="form-check-label" for="inlineRadio3">4</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="eating5" value="eating5">
+                    <label class="form-check-label" for="inlineRadio3">5</label>
+                </div>
+            </div>
+            <div class="form-check">
+                <label class="stress-headers" for="psych">Psychotic:</label>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="psych1" value="psych1">
+                    <label class="form-check-label" for="inlineRadio4">1</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="psych2" value="psych2">
+                    <label class="form-check-label" for="inlineRadio3">2</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="psych3" value="psych3">
+                    <label class="form-check-label" for="inlineRadio3">3</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="psych4" value="psych4">
+                    <label class="form-check-label" for="inlineRadio3">4</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="psych5" value="psych5">
+                    <label class="form-check-label" for="inlineRadio3">5</label>
+                </div>
+            </div>  
+            <div class="form-check">
+                <label class="stress-headers" for="pers">Personality:</label>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="pers1" value="pers1">
+                    <label class="form-check-label" for="inlineRadio4">1</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="pers2" value="pers2">
+                    <label class="form-check-label" for="inlineRadio4">2</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="pers3" value="pers3">
+                    <label class="form-check-label" for="inlineRadio4">3</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="pers4" value="pers4">
+                    <label class="form-check-label" for="inlineRadio4">4</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="pers5" value="pers5">
+                    <label class="form-check-label" for="inlineRadio4">5</label>
+                </div>
+            </div>  
             <div class="form-group">
-                <label for="stresses">What types of stress do you face?</label>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                    <label class="form-check-label" for="exampleRadios1">
-                        School
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                    <label class="form-check-label" for="exampleRadios1">
-                        Test
-                  </label>
-                </div>
+                <label for="interests">What are you interested in?</label>
+                <input type="text" name="interests" id="interests" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="medications">Which medications are you taking?</label>
+                <input type="text" name="medications" id="medications" class="form-control">
             </div>
     		<div class="form-check">
     			<input type="checkbox" id="accept-terms" class="form-check-input">
