@@ -1,0 +1,37 @@
+ $.ajax({
+        url:"http://10.21.159.187:5000/user/medications",
+        type:"post",
+        dataType:"json",
+        data:{
+            email:"admin@gmail.com"
+        },
+        success: function(msg) {
+            
+            console.log(msg);
+            var re="";
+            for(var i in msg)
+            {
+                console.log(i);
+                for (var j in msg[i])
+                {
+                    re='<div class="hq">'+msg[i][j]+'</div>';
+                    document.writeln(re);
+                
+                }
+            }
+           // var obj = eval('(' + msg + ')');
+           // console.log(json)
+            // for (var i=0 in json.medications)
+            // {
+            //        var newDiv = document.createElement('div');
+            //        newDiv.id = 'r'+i;
+            //        newDiv.className = 'ansbox';
+            //        toAdd.appendChild(newDiv);
+            // }
+        },
+        error: function(XMLHttpRequest, textStatus, errorThrown) {
+            alert(XMLHttpRequest.status);
+            alert(XMLHttpRequest.readyState);
+            alert(textStatus);
+        },
+    });
