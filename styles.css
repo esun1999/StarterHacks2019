@@ -7,6 +7,11 @@
 #danger{
 	margin-left: 1em;
 	margin-bottom: 1em;
+	margin-top: 1em;
+}
+#takeMeds{
+	margin-left: 1em;
+	margin-bottom: 1em;
 }
 .jumbotron{
 	margin-bottom: 0;
@@ -17,6 +22,12 @@
 #support{
 	background-color: #6DFF92;	
 }
+#positive{
+	background-color: #DFEE10;
+}
 a {
   color: black;
+}
+#main-banner{
+	margin-top: 3em;
 }

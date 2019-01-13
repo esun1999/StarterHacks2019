@@ -11,7 +11,7 @@
 
 <body>
     <!-- Navigation Bar Template -->
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-primary fixed-top">
         <a href="#" class="navbar-brand">Wellness Daily</a>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
             <span class="navbar-toggler-icon"></span>
@@ -37,7 +37,7 @@
             </ul>
         </div>
     </nav>
-    <div class="jumbotron" id="main-banner">
+    <div class="jumbotron bg-light" id="main-banner">
       <h1 class="display-4">January 13th, 2019</h1>
       <p class="lead"><i>"A healing model is defined by what you are becoming, not what you've been through. Lived experience is not a scar, it's a gift." - Louis Sorin</i></p>
     </div>
@@ -83,7 +83,7 @@
             </div>
         </div>
     </div>
-    <label for="stresses"><b>Rate how heavily you were affected by the following disorders:</b></label>
+    <label for="stresses"><b>Rate how heavily you were affected by the following disorders (1 = not at all, 5 = very strong):</b></label>
     <div class="form-check">
         <div class="row">
             <div class="col">
@@ -232,22 +232,40 @@
 </div>
 <div class="row">
     <div class="col">
-        <button id="danger" type="button" class="btn btn-danger" data-toggle="modal" data-target="#after-submit">Wellness Danger!</button>
+        <button id="danger" type="button" class="btn btn-primary" data-toggle="modal" data-target="#after-submit">Wellness Break!</button>
     </div>
 </div>
 <div class="modal fade" id="after-submit">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 class="modal-title">Let's talk about it!</h2>
+                <h2 class="modal-title">Just for you!</h2>
                 <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
             </div>
             <div class="modal-body">
-                <p>We remembered you love dogs.. here's a picture!</p>
+                <p>We remembered you love dogs.. here's a cool picture!</p>
                 <img src="dog.jpg" alt="Dog">
-                <p>Contact Dr. House to schedule a meeting.</p>
-                <p>Also, check out Resources in the navigation bar for more info!</p>
-                <p>It gets better.</p>
+                <p>Always remember, it gets better.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <button id="takeMeds" type="button" class="btn btn-danger" data-toggle="modal" data-target="#after-submit">Still haven't taken medications!</button>
+    </div>
+</div>
+<div class="modal fade" id="after-submit">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Just for you!</h2>
+                <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <p>We remembered you love dogs.. here's a cool picture!</p>
+                <img src="dog.jpg" alt="Dog">
+                <p>Always remember, it gets better.</p>
             </div>
         </div>
     </div>
@@ -268,28 +286,40 @@
 </div>
     <div class="container">
         <div class="row">
-            <div class="col">
-                <div class="jumbotron" id="stressors">
-                  <div class="container">
-                    <h1 class="display-3">Stressors:</h1>
-                    <p class="lead">We've noticed a pattern in your daily responses. Here are some possible recurrent causes of distress: </p>
+            <div class="col-4">
+                <div class="jumbotron" id="positive">
+                  <div class="fluid-container">
+                    <h1 class="display-3">Positive:</h1>
+                    <p class="lead">Here are things that have been brightening your day. Seek these experiences or feelings in your daily encounters!</p>
                     <h2 class="lead font-weight-bold">Academics</h2>
                     <h2 class="lead font-weight-bold">Suicidal Thoughts</h2>
                     <h2 class="lead font-weight-bold">Parental Abuse</h2>
                   </div>
                 </div>
             </div>
-            <div class="col">
-                <div class="jumbotron" id="support">
+            <div class="col-4">
+                <div class="jumbotron" id="stressors">
                   <div class="container">
-                    <h1 class="display-3">Support:</h1>
-                    <p class="lead">Everybody faces their unique challenges every day. Here are some resources dedicated to your situation: </p>
-                    <h2 class="lead font-weight-bold"><a href="https://uwaterloo.ca/campus-wellness/health-services" target="_blank">Waterloo Health Services</a></h2>
-                    <h2 class="lead font-weight-bold"><a href="https://suicidepreventionlifeline.org/" target="_blank">National Suicide Prevention Lifeline</a></h2>
-                    <h2 class="lead font-weight-bold"><a href="https://www.protectchildren.ca/en/" target="_blank">Canadian Centre for Child Protection</a></h2>
+                    <h1 class="display-3">Stressors:</h1>
+                    <p class="lead">We've noticed a pattern in your responses. Here are some recurring causes of distress: </p>
+                    <h2 class="lead font-weight-bold">Academics</h2>
+                    <h2 class="lead font-weight-bold">Suicidal Thoughts</h2>
+                    <h2 class="lead font-weight-bold">Parental Abuse</h2>
                   </div>
                 </div>
             </div>
+            <div class="col-4">
+                <div class="jumbotron" id="support">
+                  <div class="fluid-container">
+                    <h1 class="display-3">Support:</h1>
+                    <p class="lead">We're all unique, with our own struggles. Here are some resources dedicated to your situation: </p>
+                    <h2 class="lead font-weight-bold"><a href="https://uwaterloo.ca/student-success/tutor-connect" target="_blank">Waterloo Tutor Connect</a></h2>
+                    <h2 class="lead font-weight-bold"><a href="https://suicidepreventionlifeline.org/" target="_blank">National Suicide Prevention</a></h2>
+                    <h2 class="lead font-weight-bold"><a href="https://www.protectchildren.ca/en/" target="_blank">Centre for Child Protection</a></h2>
+                  </div>
+                </div>
+            </div>
+            
         </div>
     </div>
 
