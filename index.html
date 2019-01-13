@@ -1,146 +1,250 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>main menu</title>
-<style>
-html,body {
-    width: 100%;
-    height: 100%;
-    font-family: "Microsoft Yahei", "SimSun", Arial;
-    font-size:12px;
-    overflow:hidden;
-}
-body,h3,ul,li {
-    margin: 0;
-    padding: 0;
-}
-h3,th{
-    font-weight:normal;
-}
-.ul,ul li {
-    list-style-type: none;
-}
-a{
-    text-decoration: none;
-}
+<html class="no-js" lang="en">
+    <head>
+        <title>Wellness Daily</title>
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous"> -->
+        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="styles.css">
+        <style>
+            body{
+                margin: 30px;
+            }
+            .my-container{
+                border: 1px solid green;
+            }
+            .my-row{
+                border: 3px solid red;
+                height: 300px;
+            }
+            .my-col{
+                border: 3px dotted blue;
+            }
+        </style>
+    </head>
 
-.header {
-    width: 100%;
-    height: 50px;
-    position: absolute;
-    top: 0;
-    line-height: 50px;
-}
-
-.header h3 {
-    margin-left: 12px;
-    color: #0075C7;
-}
-
-.mainBox {
-    width: 100%;
-    position: absolute;
-    top: 50px;
-    bottom: 0;
-}
-
-.mainBox .leftBox {
-    height: 100%;
-    width: 240px;
-    float: left;
-    overflow: auto;
-    background: #f8f8ee;
-    font-size: 12px;
-    font-family: "Microsoft Yahei", "SimSun", Arial;
-    border-right: 1px solid #D9D9D9;
-    border-top: 1px solid #D9D9D9;
-}
-
-.menuItem a,.menuItem a:visited {
-    padding-left: 20px;
-    width: 220px;
-    height: 32px;
-    background-color: #f8f8f8;
-    border-bottom: solid 1px #EAEAEA;
-    border-top: solid 1px #FFFFFF;
-    display: block;
-    line-height: 32px;
-    color: #000000;
-}
-
-.menuItem a:hover,.menuItem a:active {
-    background: #f2f2f2;
-    color: #0075c7;
-}
-
-.menuItem img {
-    width: 18px;
-    height: 18px;
-    vertical-align: middle;
-    margin-right: 10px;
-}
-
-.mainBox .rightBox {
-    height: 100%;
-    margin-left: 241px;
-    padding-right: 1px;
-    padding-left: 1px;
-    border-left: 1px solid #E6E6E6;
-    border-top: 1px solid #D9D9D9;
-    overflow: auto;
-}
-
-.mainBox .leftBox{
-
-}
-
-.slideBtn {
-    cursor: pointer;
-    width: 1em;
-    position: absolute;
-    top: 40%;
-    left: 1;
-    display: block;
-}
-
-
-</style>
-<script type="text/javascript"
-    src="jquery.js"></script>
-</head>
-
-<body>
-    <div class="header">
-        <h3>
-            MAIN MENUE
-        </h3>
-    </div>
-    <div class="mainBox">
-        <div class="leftBox">
-            <div class="menuItem zzjg">
-                <a href="">TO-DO LIST</a>
+    <body>
+        <!-- Navigation Bar Template -->
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+            <a href="#" class="navbar-brand">Wellness Daily</a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav">
+                    <!-- Dropdown Menu Template -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Resources
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="https://cmha.ca/" target="_blank">CMHA</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="https://uwaterloo.ca/campus-wellness/counselling-services" target="_blank">Waterloo Counselling Services</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="https://suicidepreventionlifeline.org/" target="_blank">Suicide Prevention LIfeline</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="login/index.html" class="nav-link ">Sign Out</a>
+                    </li>
+                </ul>
             </div>
-            <div class="menuItem ygfc">
-                <a href="">SURVEY</a>
-            </div>
-            <div class="menuItem wghf">
-                <a href="">SHOW MY EVERYDAY </a>
-            </div>
-            <div class="menuItem xxyd">
-                <a href="">NOTIFICATION</a>
-            </div>
-            <div class="menuItem tzgg">
-                <a href="">MY PHOTO</a>
-            </div>
-            <div class="menuItem xwzx">
-                <a href="index.html"
-                    target="_blank">LOG OUT</a>
+
+        </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <br>
+                <h1 class="text-center">Hello *NAME*!</h1>
+                <h3 class="text-center">Please record your daily entry:</h3>
+                <br>
             </div>
         </div>
-        <div class="rightBox">
-
+    </div>
+    <label for="medications"><b>Please take the following medications and check off when completed:</b></label>
+    <br>
+    <div class="form-check">
+        <div class="row">
+            <div class="col">
+                <label class="medications-headers" for="med1">**MEDICATION NAME**:</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="yes1" value="yes">
+                <label class="form-check-label" for="inlineRadio1">Yes</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="no1" value="no">
+                <label class="form-check-label" for="inlineRadio1">No</label>
+            </div>
         </div>
     </div>
-</body>
+    <div class="form-check">
+        <div class="row">
+            <div class="col">
+                <label class="medications-headers" for="med1">Medication 1:</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="yes1" value="yes">
+                <label class="form-check-label" for="inlineRadio1">Yes</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="no1" value="no">
+                <label class="form-check-label" for="inlineRadio1">No</label>
+            </div>
+        </div>
+    </div>
+    <label for="stresses"><b>Rate how heavily you were affected by the following disorders:</b></label>
+    <div class="form-check">
+        <div class="row">
+            <div class="col">
+                <label class="stress-headers" for="anxiety">Anxiety:</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="anxiety1" value="anxiety1">
+                <label class="form-check-label" for="inlineRadio1">1</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="anxiety2" value="anxiety2">
+                <label class="form-check-label" for="inlineRadio1">2</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="anxiety3" value="anxiety3">
+                <label class="form-check-label" for="inlineRadio1">3</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="anxiety4" value="anxiety4">
+                <label class="form-check-label" for="inlineRadio1">4</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="anxiety5" value="anxiety5">
+                <label class="form-check-label" for="inlineRadio1">5</label>
+            </div>
+        </div>
+    </div>
+    <div class="form-check">
+        <div class="row">
+            <div class="col">
+                <label class="stress-headers" for="mood">Mood:</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="mood1" value="mood1">
+                <label class="form-check-label" for="inlineRadio2">1</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="mood2" value="mood2">
+                <label class="form-check-label" for="inlineRadio2">2</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="mood3" value="mood3">
+                <label class="form-check-label" for="inlineRadio2">3</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="mood4" value="mood4">
+                <label class="form-check-label" for="inlineRadio2">4</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="mood5" value="mood5">
+                <label class="form-check-label" for="inlineRadio2">5</label>
+            </div>
+        </div>
+    </div>
+    <div class="form-check">
+        <div class="row">
+            <div class="col">
+                <label class="stress-headers" for="eating">Eating:</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="eating1" value="eating1">
+                <label class="form-check-label" for="inlineRadio3">1</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="eating2" value="eating2">
+                <label class="form-check-label" for="inlineRadio3">2</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="eating3" value="eating3">
+                <label class="form-check-label" for="inlineRadio3">3</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="eating4" value="eating4">
+                <label class="form-check-label" for="inlineRadio3">4</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="eating5" value="eating5">
+                <label class="form-check-label" for="inlineRadio3">5</label>
+            </div>
+        </div>
+    </div>
+    <div class="form-check">
+        <div class="row">
+            <div class="col">
+                <label class="stress-headers" for="psych">Psychotic:</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="psych1" value="psych1">
+                <label class="form-check-label" for="inlineRadio4">1</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="psych2" value="psych2">
+                <label class="form-check-label" for="inlineRadio3">2</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="psych3" value="psych3">
+                <label class="form-check-label" for="inlineRadio3">3</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="psych4" value="psych4">
+                <label class="form-check-label" for="inlineRadio3">4</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="psych5" value="psych5">
+                <label class="form-check-label" for="inlineRadio3">5</label>
+            </div>
+        </div>
+    </div>  
+    <div class="form-check">
+        <div class="row">
+            <div class="col">
+                <label class="stress-headers" for="pers">Personality:</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="pers1" value="pers1">
+                <label class="form-check-label" for="inlineRadio4">1</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="pers2" value="pers2">
+                <label class="form-check-label" for="inlineRadio4">2</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="pers3" value="pers3">
+                <label class="form-check-label" for="inlineRadio4">3</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="pers4" value="pers4">
+                <label class="form-check-label" for="inlineRadio4">4</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="pers5" value="pers5">
+                <label class="form-check-label" for="inlineRadio4">5</label>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+      <label for="positive"><b>What made you feel happy today? </b></label>
+      <textarea class="form-control" rows="4" id="comment"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="negative"><b>What made you feel down today? </b></label>
+      <textarea class="form-control" rows="4" id="comment"></textarea>
+    </div>
+    <button type="submit" class="btn btn-outline-success" >Submit</button>
+    </form>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+        <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+    </body>
 </html>
