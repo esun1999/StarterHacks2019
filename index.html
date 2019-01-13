@@ -21,7 +21,7 @@
                 <!-- Dropdown Menu Template -->
             <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Resources
+              Additional Resources
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="https://cmha.ca/" target="_blank">CMHA</a>
@@ -37,20 +37,22 @@
             </ul>
         </div>
     </nav>
-    <hr>
+    <div class="jumbotron" id="main-banner">
+      <h1 class="display-4">January 13th, 2019</h1>
+      <p class="lead"><i>"A healing model is defined by what you are becoming, not what you've been through. Lived experience is not a scar, it's a gift." - Louis Sorin</i></p>
+    </div>
 <div id="daily-survey" class="card card-body collapse show">
     <div class="container">
         <div class="row">
             <div class="col">
                 <br>
-                <h1 class="text-center">Hello *NAME*!</h1>
-                <h3 class="text-center">Please record your daily entry:</h3>
+                <h1 class="display-4 text-center">Hello *NAME*!</h1>
+                <h3 class="display-5 text-center">Please record your daily entry:</h3>
                 <br>
             </div>
         </div>
     </div>
     <label for="medications"><b>Please take the following medications and check off when completed:</b></label>
-    <br>
     <div class="form-check">
         <div class="row">
             <div class="col">
@@ -264,6 +266,34 @@
     </div>
   </div>
 </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="jumbotron" id="stressors">
+                  <div class="container">
+                    <h1 class="display-3">Stressors:</h1>
+                    <p class="lead">We've noticed a pattern in your daily responses. Here are some possible recurrent causes of distress: </p>
+                    <h2 class="lead font-weight-bold">Academics</h2>
+                    <h2 class="lead font-weight-bold">Suicidal Thoughts</h2>
+                    <h2 class="lead font-weight-bold">Parental Abuse</h2>
+                  </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="jumbotron" id="support">
+                  <div class="container">
+                    <h1 class="display-3">Support:</h1>
+                    <p class="lead">Everybody faces their unique challenges every day. Here are some resources dedicated to your situation: </p>
+                    <h2 class="lead font-weight-bold"><a href="https://uwaterloo.ca/campus-wellness/health-services" target="_blank">Waterloo Health Services</a></h2>
+                    <h2 class="lead font-weight-bold"><a href="https://suicidepreventionlifeline.org/" target="_blank">National Suicide Prevention Lifeline</a></h2>
+                    <h2 class="lead font-weight-bold"><a href="https://www.protectchildren.ca/en/" target="_blank">Canadian Centre for Child Protection</a></h2>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <!-- Page level plugin JavaScript-->
     <script src="dashboard/vendor/chart.js/Chart.min.js"></script>
     <script src="dashboard/js/demo/chart-area-demo.js"></script>

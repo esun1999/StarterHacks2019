@@ -8,3 +8,15 @@
 	margin-left: 1em;
 	margin-bottom: 1em;
 }
+.jumbotron{
+	margin-bottom: 0;
+}
+#stressors{
+	background-color: #FF606F;
+}
+#support{
+	background-color: #6DFF92;	
+}
+a {
+  color: black;
+}
