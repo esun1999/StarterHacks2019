@@ -73,6 +73,10 @@
 
 	<script>
 		var form = document.getElementById('login-form');
+
+		function setStorage(email) {
+			window.localStorage.setItem('email', email);
+		}
 		form.onsubmit = function (e) {
 			e.preventDefault();
 			//Variables to store the username and password
@@ -86,17 +90,17 @@
 			//This is the POST request
 			$.ajax({
 				type: "POST",
-				url: "http://10.21.159.187:5000/auth/login",
+				url: "http://35.237.218.236/auth/login",
 				data: {
 					email: user,
 					password: pass
 				},
 				success: function (msg) {
 					console.log(msg);
-					document.cookie = "email=" + user;
+					setStorage(user);
 					window.location.replace('/./index.html');
 				},
-				fail: function() {
+				fail: function () {
 					console.log("Login failed");
 				}
 			});

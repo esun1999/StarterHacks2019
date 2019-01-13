@@ -32,7 +32,7 @@
             var n = month[now.getMonth()];
 
             var date = now.getDate();
-            var time =now.getTime();
+            var time = now.getTime();
 
             var currentDate = new Date().toLocaleTimeString();
 
@@ -248,12 +248,13 @@
                 aria-controls="#daily-survey" type="submit" class="btn btn-outline-success">Submit</button>
     </form>
     </div>
-    <div class="row">
+
+    <!-- <div class="row">
         <div class="col">
             <button id="danger" type="button" class="btn btn-primary" data-toggle="modal" data-target="#after-submit">BAD
                 DAY MODAL!</button>
         </div>
-    </div>
+    </div> -->
     <div class="modal fade" id="after-submit">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -271,7 +272,7 @@
             </div>
         </div>
     </div>
-    <div class="row">
+    <!-- <div class="row">
         <div class="col">
             <button id="takeMeds" type="button" class="btn btn-danger" data-toggle="modal" data-target="#no-meds">Still
                 haven't taken medications!</button>
@@ -289,7 +290,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <div id="content-wrapper">
         <div class="container-fluid">
             <!-- Area Chart Example-->
@@ -352,7 +353,7 @@
 
     <!-- Page level plugin JavaScript-->
     <script src="dashboard/vendor/chart.js/Chart.min.js"></script>
-    <script src="dashboard/js/demo/chart-area-demo.js"></script>
+    <!-- <script src="dashboard/js/demo/chart-area-demo.js"></script> -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
         crossorigin="anonymous"></script>
@@ -364,8 +365,79 @@
     </script>
 
     <script>
+        $('#after-submit').modal({
+            show: false
+        });
         var form = document.getElementById('survey');
         var medications = document.querySelector('#medications');
+        var picture = document.getElementById('picture');
+
+        // Set new default font family and font color to mimic Bootstrap's default styling
+        Chart.defaults.global.defaultFontFamily =
+            '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
+        Chart.defaults.global.defaultFontColor = '#292b2c';
+
+        // Area Chart Example
+        var ctx = document.getElementById("myAreaChart");
+        var myLineChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ["Jan 1", "Jan 2", "Jan 3", "Jan 4", "Jan 5", "Jan 6",
+                    "Jan 7", "Jan 8", "Jan 9", "Jan 10", "Jan 11", "Jan 12",
+                    "Jan 13"
+                ],
+                datasets: [{
+                    label: "Level",
+                    lineTension: 0.3,
+                    backgroundColor: "rgba(2,117,216,0.2)",
+                    borderColor: "rgba(2,117,216,1)",
+                    pointRadius: 5,
+                    pointBackgroundColor: "rgba(2,117,216,1)",
+                    pointBorderColor: "rgba(255,255,255,0.8)",
+                    pointHoverRadius: 5,
+                    pointHoverBackgroundColor: "rgba(2,117,216,1)",
+                    pointHitRadius: 50,
+                    pointBorderWidth: 2,
+                    data: [15, 12, 4, 2, 2, 6, 20, 5, 12, 15, 3, 2, 0],
+                }],
+            },
+            options: {
+                scales: {
+                    xAxes: [{
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Date'
+                        },
+                        time: {
+                            unit: 'date'
+                        },
+                        gridLines: {
+                            display: false
+                        },
+                        ticks: {
+                            maxTicksLimit: 7
+                        }
+                    }],
+                    yAxes: [{
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Wellness Level'
+                        },
+                        ticks: {
+                            min: 0,
+                            max: 25,
+                            maxTicksLimit: 5
+                        },
+                        gridLines: {
+                            color: "rgba(0, 0, 0, .125)",
+                        }
+                    }],
+                },
+                legend: {
+                    display: false
+                }
+            }
+        });
 
         function getStorage() {
             return window.localStorage.getItem('email');
@@ -373,7 +445,7 @@
         var email = getStorage();
         var toAdd = document.createDocumentFragment();
         $.ajax({
-            url: "http://10.21.159.187:5000/user/medications",
+            url: "http://35.237.218.236/user/medications",
             type: "post",
             dataType: "json",
             data: {
@@ -415,7 +487,7 @@
         });
         $.ajax({
             type: "POST",
-            url: "http://10.21.159.187:5000/user/get_username",
+            url: "http://35.237.218.236/user/get_username",
             data: {
                 email: email
             },
@@ -439,7 +511,7 @@
             e.preventDefault();
             $.ajax({
                 type: "POST",
-                url: "http://10.21.159.187:5000/user/survey",
+                url: "http://35.237.218.236/user/survey",
                 data: {
                     email: email,
                     anxiety: anxiety,
@@ -450,6 +522,101 @@
                 },
                 success: function (msg) {
                     console.log(msg);
+                    var s = new Number(msg);
+                    var inverse_s = 25 - s;
+                    // Set new default font family and font color to mimic Bootstrap's default styling
+                    Chart.defaults.global.defaultFontFamily =
+                        '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
+                    Chart.defaults.global.defaultFontColor = '#292b2c';
+
+                    // Area Chart Example
+                    var ctx = document.getElementById("myAreaChart");
+                    var myLineChart = new Chart(ctx, {
+                        type: 'line',
+                        data: {
+                            labels: ["Jan 1", "Jan 2", "Jan 3", "Jan 4", "Jan 5", "Jan 6",
+                                "Jan 7", "Jan 8", "Jan 9", "Jan 10", "Jan 11", "Jan 12",
+                                "Jan 13"
+                            ],
+                            datasets: [{
+                                label: "Level",
+                                lineTension: 0.3,
+                                backgroundColor: "rgba(2,117,216,0.2)",
+                                borderColor: "rgba(2,117,216,1)",
+                                pointRadius: 5,
+                                pointBackgroundColor: "rgba(2,117,216,1)",
+                                pointBorderColor: "rgba(255,255,255,0.8)",
+                                pointHoverRadius: 5,
+                                pointHoverBackgroundColor: "rgba(2,117,216,1)",
+                                pointHitRadius: 50,
+                                pointBorderWidth: 2,
+                                data: [15, 12, 4, 2, 2, 6, 20, 5, 12, 15, 3, 2, inverse_s],
+                            }],
+                        },
+                        options: {
+                            scales: {
+                                xAxes: [{
+                                    scaleLabel: {
+                                        display: true,
+                                        labelString: 'Date'
+                                    },
+                                    time: {
+                                        unit: 'date'
+                                    },
+                                    gridLines: {
+                                        display: false
+                                    },
+                                    ticks: {
+                                        maxTicksLimit: 7
+                                    }
+                                }],
+                                yAxes: [{
+                                    scaleLabel: {
+                                        display: true,
+                                        labelString: 'Wellness Level'
+                                    },
+                                    ticks: {
+                                        min: 0,
+                                        max: 25,
+                                        maxTicksLimit: 5
+                                    },
+                                    gridLines: {
+                                        color: "rgba(0, 0, 0, .125)",
+                                    }
+                                }],
+                            },
+                            legend: {
+                                display: false
+                            }
+                        }
+                    });
+                    if (s > 20) {
+                        console.log("inside if");
+                        //                     var newRow = document.createElement('div');
+                        //                     newRow.classList.add('row');
+                        //                     newRow.innerHTML =
+                        //                         `
+                        //                     <div class="modal fade" id="after-submit">
+                        //     <div class="modal-dialog modal-dialog-centered">
+                        //         <div class="modal-content">
+                        //             <div class="modal-header">
+                        //                 <h2 class="modal-title">Looks like you didn't have the best day..</h2>
+                        //                 <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                        //             </div>
+                        //             <div class="modal-body">
+                        //                 <p>Tomorrow is another day, you'll have a great one tomorrow! Spend time with friends, family, and
+                        //                     make sure to seek support if needed.</p>
+                        //                 <p>We also remembered you love dogs.. here's a great picture!</p>
+                        //                 <img src="dog.jpg" alt="Dog">
+                        //                 <p>Always remember, it gets better.</p>
+                        //             </div>
+                        //         </div>
+                        //     </div>
+                        // </div>
+                        //               `;
+                        //                     picture.appendChild(newRow);
+                        $('#after-submit').modal('show');
+                    }
                 },
                 fail: function () {
                     console.log("Login failed");
@@ -458,7 +625,7 @@
             //POST request for HAPPY comment
             $.ajax({
                 type: "POST",
-                url: "http://10.21.159.187:5000/user/tone",
+                url: "http://35.237.218.236/user/tone",
                 data: {
                     sentence: commentHappy
                 },
@@ -472,7 +639,7 @@
             //POST request for SAD comment
             $.ajax({
                 type: "POST",
-                url: "http://10.21.159.187:5000/user/tone",
+                url: "http://35.237.218.236/user/tone",
                 data: {
                     sentence: commentSad
                 },

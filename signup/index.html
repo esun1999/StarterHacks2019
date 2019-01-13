@@ -109,7 +109,7 @@
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
-        <script src="js/main.js"></script>
+    <script src="js/main.js"></script>
 
     <script>
         document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
@@ -117,6 +117,10 @@
     </script>
     <script>
         var form = document.getElementById('signup-form');
+
+        function setStorage(email) {
+            window.localStorage.setItem('email', email);
+        }
         form.onsubmit = function (e) {
             e.preventDefault();
             //Variables to store the username and password
@@ -142,7 +146,7 @@
             //This is the POST request
             $.ajax({
                 type: "POST",
-                url: "http://10.21.159.187:5000/user/register",
+                url: "http://35.237.218.236/user/register",
                 data: {
                     firstname: firstname,
                     lastname: lastname,
@@ -155,6 +159,7 @@
                 },
                 success: function (msg) {
                     console.log(msg);
+                    setStorage(user);
                     window.location.replace('/./index.html');
                 },
                 fail: function () {
