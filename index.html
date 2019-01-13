@@ -2,18 +2,56 @@
 <html class="no-js" lang="en">
 
 <head>
-    <title>Wellness Daily</title>
+    <title>Wish Wellness</title>
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="styles.css">
+
+    <script language="javascript" type="text/javascript">
+        function time() {
+
+            var now = new Date();
+
+            var year = now.getFullYear();
+
+            var month = new Array();
+            month[0] = "January";
+            month[1] = "February";
+            month[2] = "March";
+            month[3] = "April";
+            month[4] = "May";
+            month[5] = "June";
+            month[6] = "July";
+            month[7] = "August";
+            month[8] = "September";
+            month[9] = "October";
+            month[10] = "November";
+            month[11] = "December";
+            var n = month[now.getMonth()];
+
+            var date = now.getDate();
+            var time =now.getTime();
+
+            var currentDate = new Date().toLocaleTimeString();
+
+            //写入相应id
+
+            //document.getElementById("info1").innerHTML="Today is"+year+"year"+(month+1)+"month"+date+"day";
+            document.getElementById("info1").innerHTML = n + " " + date + "th " + year;
+            document.getElementById("info2").innerHTML = "Last updated " + currentDate;
+
+            //document.getElementById("info2").innerHTML=;
+
+        }
+    </script>
 </head>
 
-<body>
+<body onload="time()">
     <!-- Navigation Bar Template -->
     <nav class="navbar navbar-expand-sm navbar-dark bg-primary fixed-top">
-        <a href="#" class="navbar-brand">Wellness Daily</a>
+        <a href="#" class="navbar-brand">Wish Wellness</a>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -41,173 +79,174 @@
             </ul>
         </div>
     </nav>
-    <div class="jumbotron bg-light" id="main-banner">
-        <h1 class="display-4">January 13th, 2019</h1>
+    <div class="jumbotron" id="main-banner" onload="time()">
+        <h1 class="display-4" id="info1"></h1>
         <p class="lead"><i>"A healing model is defined by what you are becoming, not what you've been through. Lived
                 experience is not a scar, it's a gift." - Louis Sorin</i></p>
     </div>
-    <div id="daily-survey" class="card card-body collapse show">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <br>
-                    <h1 class="display-4 text-center" id="name-greeting">Hello *NAME*!</h1>
-                    <h3 class="display-5 text-center">Please record your daily entry:</h3>
-                    <br>
+    <form id="survey">
+        <div id="daily-survey" class="card card-body collapse show">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <br>
+                        <h1 class="display-4 text-center" id="name-greeting">Hello!</h1>
+                        <h3 class="display-5 text-center">Please record your daily entry:</h3>
+                        <br>
+                    </div>
                 </div>
             </div>
-        </div>
-        <label for="medications"><b>Please take the following medications and check off when completed:</b></label>
-        <div class="form-check" id="medications">
-        </div>
-        <label for="stresses"><b>Rate how heavily you were affected by the following disorders (1 = not at all, 5 =
-                very strong):</b></label>
-        <div class="form-check">
-            <div class="row">
-                <div class="col">
-                    <label class="stress-headers" for="anxiety">Anxiety:</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="anxiety1" value="anxiety1">
-                    <label class="form-check-label" for="inlineRadio1">1</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="anxiety2" value="anxiety2">
-                    <label class="form-check-label" for="inlineRadio1">2</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="anxiety3" value="anxiety3">
-                    <label class="form-check-label" for="inlineRadio1">3</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="anxiety4" value="anxiety4">
-                    <label class="form-check-label" for="inlineRadio1">4</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="anxiety5" value="anxiety5">
-                    <label class="form-check-label" for="inlineRadio1">5</label>
+            <label for="medications"><b>Please take the following medications and check off when completed:</b></label>
+            <div class="form-check" id="medications">
+            </div>
+            <label for="stresses"><b>Rate how heavily you were affected by the following disorders (1 = not at all, 5 =
+                    very strong):</b></label>
+            <div class="form-check">
+                <div class="row">
+                    <div class="col">
+                        <label class="stress-headers" for="anxiety">Anxiety:</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="anxiety1" value="1">
+                        <label class="form-check-label" for="inlineRadio1">1</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="anxiety2" value="2">
+                        <label class="form-check-label" for="inlineRadio1">2</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="anxiety3" value="3">
+                        <label class="form-check-label" for="inlineRadio1">3</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="anxiety4" value="4">
+                        <label class="form-check-label" for="inlineRadio1">4</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="anxiety5" value="5">
+                        <label class="form-check-label" for="inlineRadio1">5</label>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="form-check">
-            <div class="row">
-                <div class="col">
-                    <label class="stress-headers" for="mood">Mood:</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="mood1" value="mood1">
-                    <label class="form-check-label" for="inlineRadio2">1</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="mood2" value="mood2">
-                    <label class="form-check-label" for="inlineRadio2">2</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="mood3" value="mood3">
-                    <label class="form-check-label" for="inlineRadio2">3</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="mood4" value="mood4">
-                    <label class="form-check-label" for="inlineRadio2">4</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="mood5" value="mood5">
-                    <label class="form-check-label" for="inlineRadio2">5</label>
-                </div>
-            </div>
-        </div>
-        <div class="form-check">
-            <div class="row">
-                <div class="col">
-                    <label class="stress-headers" for="eating">Eating:</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="eating1" value="eating1">
-                    <label class="form-check-label" for="inlineRadio3">1</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="eating2" value="eating2">
-                    <label class="form-check-label" for="inlineRadio3">2</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="eating3" value="eating3">
-                    <label class="form-check-label" for="inlineRadio3">3</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="eating4" value="eating4">
-                    <label class="form-check-label" for="inlineRadio3">4</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="eating5" value="eating5">
-                    <label class="form-check-label" for="inlineRadio3">5</label>
+            <div class="form-check">
+                <div class="row">
+                    <div class="col">
+                        <label class="stress-headers" for="mood">Mood:</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="mood1" value="1">
+                        <label class="form-check-label" for="inlineRadio2">1</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="mood2" value="2">
+                        <label class="form-check-label" for="inlineRadio2">2</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="mood3" value="3">
+                        <label class="form-check-label" for="inlineRadio2">3</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="mood4" value="4">
+                        <label class="form-check-label" for="inlineRadio2">4</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="mood5" value="5">
+                        <label class="form-check-label" for="inlineRadio2">5</label>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="form-check">
-            <div class="row">
-                <div class="col">
-                    <label class="stress-headers" for="psych">Psychotic:</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="psych1" value="psych1">
-                    <label class="form-check-label" for="inlineRadio4">1</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="psych2" value="psych2">
-                    <label class="form-check-label" for="inlineRadio3">2</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="psych3" value="psych3">
-                    <label class="form-check-label" for="inlineRadio3">3</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="psych4" value="psych4">
-                    <label class="form-check-label" for="inlineRadio3">4</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="psych5" value="psych5">
-                    <label class="form-check-label" for="inlineRadio3">5</label>
-                </div>
-            </div>
-        </div>
-        <div class="form-check">
-            <div class="row">
-                <div class="col">
-                    <label class="stress-headers" for="pers">Personality:</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="pers1" value="pers1">
-                    <label class="form-check-label" for="inlineRadio4">1</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="pers2" value="pers2">
-                    <label class="form-check-label" for="inlineRadio4">2</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="pers3" value="pers3">
-                    <label class="form-check-label" for="inlineRadio4">3</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="pers4" value="pers4">
-                    <label class="form-check-label" for="inlineRadio4">4</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="pers5" value="pers5">
-                    <label class="form-check-label" for="inlineRadio4">5</label>
+            <div class="form-check">
+                <div class="row">
+                    <div class="col">
+                        <label class="stress-headers" for="eating">Eating:</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="eating1" value="1">
+                        <label class="form-check-label" for="inlineRadio3">1</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="eating2" value="2">
+                        <label class="form-check-label" for="inlineRadio3">2</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="eating3" value="3">
+                        <label class="form-check-label" for="inlineRadio3">3</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="eating4" value="4">
+                        <label class="form-check-label" for="inlineRadio3">4</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="eating5" value="5">
+                        <label class="form-check-label" for="inlineRadio3">5</label>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="form-group">
-            <label for="positive"><b>What made you feel happy today? </b></label>
-            <textarea class="form-control" rows="4" id="comment"></textarea>
-        </div>
-        <div class="form-group">
-            <label for="negative"><b>What made you feel down today? </b></label>
-            <textarea class="form-control" rows="4" id="comment"></textarea>
-        </div>
-        <button id="submit-btn" data-toggle="collapse" data-target="#daily-survey" aria-expanded="true" aria-controls="#daily-survey"
-            type="submit" class="btn btn-outline-success">Submit</button>
-        </form>
+            <div class="form-check">
+                <div class="row">
+                    <div class="col">
+                        <label class="stress-headers" for="psych">Psychotic:</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="psych1" value="1">
+                        <label class="form-check-label" for="inlineRadio4">1</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="psych2" value="2">
+                        <label class="form-check-label" for="inlineRadio3">2</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="psych3" value="3">
+                        <label class="form-check-label" for="inlineRadio3">3</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="psych4" value="4">
+                        <label class="form-check-label" for="inlineRadio3">4</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="psych5" value="5">
+                        <label class="form-check-label" for="inlineRadio3">5</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-check">
+                <div class="row">
+                    <div class="col">
+                        <label class="stress-headers" for="pers">Personality:</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="pers1" value="1">
+                        <label class="form-check-label" for="inlineRadio4">1</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="pers2" value="2">
+                        <label class="form-check-label" for="inlineRadio4">2</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="pers3" value="3">
+                        <label class="form-check-label" for="inlineRadio4">3</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="pers4" value="4">
+                        <label class="form-check-label" for="inlineRadio4">4</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="pers5" value="5">
+                        <label class="form-check-label" for="inlineRadio4">5</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="positive"><b>What made you feel happy today? </b></label>
+                <textarea class="form-control" rows="4" name="commentHappy" id="comment"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="negative"><b>What made you feel down today? </b></label>
+                <textarea class="form-control" rows="4" name="commentSad" id="comment"></textarea>
+            </div>
+            <button id="submit-btn" data-toggle="collapse" data-target="#daily-survey" aria-expanded="true"
+                aria-controls="#daily-survey" type="submit" class="btn btn-outline-success">Submit</button>
+    </form>
     </div>
     <div class="row">
         <div class="col">
@@ -261,16 +300,16 @@
                 <div class="card-body">
                     <canvas id="myAreaChart" width="100%" height="30"></canvas>
                 </div>
-                <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+                <div class="card-footer small text-muted" id="info2"></div>
             </div>
         </div>
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-4">
+            <div class="col-xl-4 col-lg-12">
                 <div class="jumbotron" id="positive">
                     <div class="fluid-container">
-                        <h1 class="display-3">Positive:</h1>
+                        <h1 class="display-3">Positive</h1>
                         <p class="lead">Here are things that have been brightening your day. Seek these experiences or
                             feelings in your daily encounters!</p>
                         <h2 class="lead font-weight-bold">Academics</h2>
@@ -279,10 +318,10 @@
                     </div>
                 </div>
             </div>
-            <div class="col-4">
+            <div class="col-xl-4 col-lg-12">
                 <div class="jumbotron" id="stressors">
                     <div class="container">
-                        <h1 class="display-3">Stressors:</h1>
+                        <h1 class="display-3">Stressors</h1>
                         <p class="lead">We've noticed a pattern in your responses. Here are some recurring causes of
                             distress: </p>
                         <h2 class="lead font-weight-bold">Academics</h2>
@@ -291,10 +330,10 @@
                     </div>
                 </div>
             </div>
-            <div class="col-4">
+            <div class="col-xl-4 col-lg-12">
                 <div class="jumbotron" id="support">
                     <div class="fluid-container">
-                        <h1 class="display-3">Support:</h1>
+                        <h1 class="display-3">Support</h1>
                         <p class="lead">We're all unique, with our own struggles. Here are some resources dedicated to
                             your situation: </p>
                         <h2 class="lead font-weight-bold"><a href="https://uwaterloo.ca/student-success/tutor-connect"
@@ -325,6 +364,7 @@
     </script>
 
     <script>
+        var form = document.getElementById('survey');
         var medications = document.querySelector('#medications');
 
         function getStorage() {
@@ -355,11 +395,11 @@
                 <label class="medications-headers" for="med1">${medName}:</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="${radioOptionName}" id="yes1" value="yes">
+                <input class="form-check-input" type="radio" name="${radioOptionName}" id="yes" value="yes">
                 <label class="form-check-label" for="inlineRadio1">Yes</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="${radioOptionName}" id="no1" value="no">
+                <input class="form-check-input" type="radio" name="${radioOptionName}" id="no" value="no">
                 <label class="form-check-label" for="inlineRadio1">No</label>
             </div>
             `;
@@ -387,6 +427,64 @@
                 console.log("Login failed");
             }
         });
+        form.onsubmit = function (e) {
+            var anxiety = form.inlineRadioOptions.value;
+            var mood = form.inlineRadioOptions1.value;
+            var eating = form.inlineRadioOptions2.value;
+            var psych = form.inlineRadioOptions3.value;
+            var pers = form.inlineRadioOptions4.value;
+
+            var commentSad = form.commentSad.value;
+            var commentHappy = form.commentHappy.value;
+            e.preventDefault();
+            $.ajax({
+                type: "POST",
+                url: "http://10.21.159.187:5000/user/survey",
+                data: {
+                    email: email,
+                    anxiety: anxiety,
+                    mood: mood,
+                    eating: eating,
+                    psych: psych,
+                    pers: pers
+                },
+                success: function (msg) {
+                    console.log(msg);
+                },
+                fail: function () {
+                    console.log("Login failed");
+                }
+            });
+            //POST request for HAPPY comment
+            $.ajax({
+                type: "POST",
+                url: "http://10.21.159.187:5000/user/tone",
+                data: {
+                    sentence: commentHappy
+                },
+                success: function (msg) {
+                    console.log(msg);
+                },
+                fail: function () {
+                    console.log("Login failed");
+                }
+            });
+            //POST request for SAD comment
+            $.ajax({
+                type: "POST",
+                url: "http://10.21.159.187:5000/user/tone",
+                data: {
+                    sentence: commentSad
+                },
+                success: function (msg) {
+                    console.log(msg);
+                },
+                fail: function () {
+                    console.log("Login failed");
+                }
+            });
+        }
+        form.reset();
         //     for(var i=0; i < ; i++){
         //    var newDiv = document.createElement('div');
         //    newDiv.id = 'r'+i;
