@@ -1,59 +1,44 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
-    <head>
-        <title>Wellness Daily</title>
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous"> -->
-        <link rel="stylesheet" href="main.css">
-        <link rel="stylesheet" href="styles.css">
-        <style>
-            body{
-                margin: 30px;
-            }
-            .my-container{
-                border: 1px solid green;
-            }
-            .my-row{
-                border: 3px solid red;
-                height: 300px;
-            }
-            .my-col{
-                border: 3px dotted blue;
-            }
-        </style>
-    </head>
+<head>
+    <title>Wellness Daily</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
 
-    <body>
-        <!-- Navigation Bar Template -->
-        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-            <a href="#" class="navbar-brand">Wellness Daily</a>
-            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarMenu">
-                <ul class="navbar-nav">
-                    <!-- Dropdown Menu Template -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Resources
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="https://cmha.ca/" target="_blank">CMHA</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="https://uwaterloo.ca/campus-wellness/counselling-services" target="_blank">Waterloo Counselling Services</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="https://suicidepreventionlifeline.org/" target="_blank">Suicide Prevention LIfeline</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a href="login/index.html" class="nav-link ">Sign Out</a>
-                    </li>
-                </ul>
+<body>
+    <!-- Navigation Bar Template -->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <a href="#" class="navbar-brand">Wellness Daily</a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarMenu">
+            <ul class="navbar-nav">
+                <!-- Dropdown Menu Template -->
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Resources
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="https://cmha.ca/" target="_blank">CMHA</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="https://uwaterloo.ca/campus-wellness/counselling-services" target="_blank">Waterloo Counselling Services</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="https://suicidepreventionlifeline.org/" target="_blank">Suicide Prevention LIfeline</a>
             </div>
-
-        </nav>
-
+            </li>
+            <li class="nav-item">
+                <a href="login/index.html" class="nav-link ">Sign Out</a>
+            </li>
+            </ul>
+        </div>
+    </nav>
+    <hr>
+<div id="daily-survey" class="card card-body collapse show">
     <div class="container">
         <div class="row">
             <div class="col">
@@ -72,26 +57,26 @@
                 <label class="medications-headers" for="med1">**MEDICATION NAME**:</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="yes1" value="yes">
-                <label class="form-check-label" for="inlineRadio1">Yes</label>
+                <input class="form-check-input" type="radio" name="med1" id="yes1" value="yes">
+                <label class="form-check-label" for="med1">Yes</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="no1" value="no">
-                <label class="form-check-label" for="inlineRadio1">No</label>
+                <input class="form-check-input" type="radio" name="med1" id="no1" value="no">
+                <label class="form-check-label" for="med1">No</label>
             </div>
         </div>
     </div>
     <div class="form-check">
         <div class="row">
             <div class="col">
-                <label class="medications-headers" for="med1">Medication 1:</label>
+                <label class="medications-headers" for="med2">Medication 1:</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="yes1" value="yes">
+                <input class="form-check-input" type="radio" name="med2" id="yes1" value="yes">
                 <label class="form-check-label" for="inlineRadio1">Yes</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="no1" value="no">
+                <input class="form-check-input" type="radio" name="med2" id="no1" value="no">
                 <label class="form-check-label" for="inlineRadio1">No</label>
             </div>
         </div>
@@ -237,14 +222,54 @@
       <textarea class="form-control" rows="4" id="comment"></textarea>
     </div>
     <div class="form-group">
-      <label for="negative"><b>What made you feel down today? </b></label>
-      <textarea class="form-control" rows="4" id="comment"></textarea>
+       <label for="negative"><b>What made you feel down today? </b></label>
+       <textarea class="form-control" rows="4" id="comment"></textarea>
     </div>
-    <button type="submit" class="btn btn-outline-success" >Submit</button>
+    <button id="submit-btn" data-toggle="collapse" data-target="#daily-survey" aria-expanded="true" aria-controls="#daily-survey" type="submit" class="btn btn-outline-success">Submit</button>
     </form>
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-        <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
-    </body>
+</div>
+<div class="row">
+    <div class="col">
+        <button id="danger" type="button" class="btn btn-danger" data-toggle="modal" data-target="#after-submit">Wellness Danger!</button>
+    </div>
+</div>
+<div class="modal fade" id="after-submit">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Let's talk about it!</h2>
+                <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <p>We remembered you love dogs.. here's a picture!</p>
+                <img src="dog.jpg" alt="Dog">
+                <p>Contact Dr. House to schedule a meeting.</p>
+                <p>Also, check out Resources in the navigation bar for more info!</p>
+                <p>It gets better.</p>
+            </div>
+        </div>
+    </div>
+</div>
+ <div id="content-wrapper">
+  <div class="container-fluid">
+    <!-- Area Chart Example-->
+    <div class="card mb-3">
+      <div id="charts" class="card-header">
+        <i class="fas fa-chart-area"></i>
+      Your Wellness Chart</div>
+      <div class="card-body">
+        <canvas id="myAreaChart" width="100%" height="30"></canvas>
+      </div>
+      <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+    </div>
+  </div>
+</div>
+    <!-- Page level plugin JavaScript-->
+    <script src="dashboard/vendor/chart.js/Chart.min.js"></script>
+    <script src="dashboard/js/demo/chart-area-demo.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</body>
 </html>
