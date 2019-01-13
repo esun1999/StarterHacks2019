@@ -90,11 +90,12 @@
 				type: "POST",
 				url: "http://10.21.159.187:5000/auth/login",
 				data: {
-					username: user,
+					email: user,
 					password: pass
 				},
 				success: function (msg) {
 					console.log(msg);
+					document.cookie = "email=" + user;
 				},
 				fail: function() {
 					console.log("Login failed");
