@@ -56,7 +56,7 @@
 							Don’t have an account?
 						</span>
 
-						<a class="txt2" href="#">
+						<a class="txt2" href="/signup/index.html">
 							Sign Up
 						</a>
 					</div>
@@ -96,6 +96,7 @@
 				success: function (msg) {
 					console.log(msg);
 					document.cookie = "email=" + user;
+					window.location.replace('/./index.html');
 				},
 				fail: function() {
 					console.log("Login failed");
