@@ -55,11 +55,7 @@ a:focus {
 
 a:hover {
     text-decoration: none;
-    color: #330867;
-    color: -webkit-linear-gradient(right, #30cfd0, #330867);
-    color: -o-linear-gradient(right, #30cfd0, #330867);
-    color: -moz-linear-gradient(right, #30cfd0, #330867);
-    color: linear-gradient(to right, #30cfd0 0%, #330867 100%);
+    color: #FC5C7D;
 }
 
 /*---------------------------------------------*/
@@ -230,11 +226,9 @@ iframe {
     -moz-transition: all 0.4s;
     transition: all 0.4s;
 
-    background: #330867;
-    background: -webkit-linear-gradient(right, #30cfd0, #330867);
-    background: -o-linear-gradient(right, #30cfd0, #330867);
-    background: -moz-linear-gradient(right, #30cfd0, #330867);
-    background-image: linear-gradient(to right, #30cfd0 0%, #330867 100%);
+    background: #FC5C7D;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #6A82FB, #FC5C7D);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #6A82FB, #FC5C7D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
 }
 
 .focus-input100::after {
@@ -301,19 +295,15 @@ label {
 }
 
 .btn-show-pass:hover {
-    background: #330867;
-    background: -webkit-linear-gradient(right, #30cfd0, #330867);
-    background: -o-linear-gradient(right, #30cfd0, #330867);
-    background: -moz-linear-gradient(right, #30cfd0, #330867);
-    background-image: linear-gradient(to right, #30cfd0 0%, #330867 100%);
+    background: #FC5C7D;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #6A82FB, #FC5C7D);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #6A82FB, #FC5C7D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
 }
 
 .btn-show-pass.active {
-    background: #330867;
-    background: -webkit-linear-gradient(right, #30cfd0, #330867);
-    background: -o-linear-gradient(right, #30cfd0, #330867);
-    background: -moz-linear-gradient(right, #30cfd0, #330867);
-    background-image: linear-gradient(to right, #30cfd0 0%, #330867 100%);
+    background: #FC5C7D;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #6A82FB, #FC5C7D);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #6A82FB, #FC5C7D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
 }
 
 /*//////////////////////////////////////////////////////////////////
@@ -352,11 +342,9 @@ label {
     justify-content: center;
     align-items: center;
     padding: 15px;
-    background: #330867;
-    background: -webkit-linear-gradient(right, #30cfd0, #330867);
-    background: -o-linear-gradient(right, #30cfd0, #330867);
-    background: -moz-linear-gradient(right, #30cfd0, #330867);
-    background-image: linear-gradient(to right, #30cfd0 0%, #330867 100%);
+    background: #FC5C7D;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #6A82FB, #FC5C7D);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #6A82FB, #FC5C7D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
 }
 
 .wrap-signup100 {
@@ -439,11 +427,9 @@ label {
     z-index: -1;
     width: 300%;
     height: 100%;
-    background: #330867;
-    background: -webkit-linear-gradient(right, #30cfd0, #330867);
-    background: -o-linear-gradient(right, #30cfd0, #330867);
-    background: -moz-linear-gradient(right, #30cfd0, #330867);
-    background-image: linear-gradient(to right, #30cfd0 0%, #330867 100%);
+    background: #FC5C7D;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #6A82FB, #FC5C7D);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #6A82FB, #FC5C7D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
     top: 0;
     left: -100%;
 

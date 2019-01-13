@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <title>Sign Up</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="images/icons/favicon.ico" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="css/signup.css">
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <!--===============================================================================================-->
+
+<body>
+    <div class="limiter">
+        <div class="container-signup100">
+            <div class="wrap-signup100">
+                <form class="signup100-form validate-form" id="signup-form">
+                    <span class="signup100-form-title p-b-26">
+                        Sign Up
+                    </span>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group wrap-input100 validate-input" data-validate="Enter a first name">
+                                <input class="input100" type="text" name="firstname">
+                                <span class="focus-input100" data-placeholder="First name"></span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group wrap-input100 validate-input" data-validate="Enter a last name">
+                                <input class="input100" type="text" name="lastname">
+                                <span class="focus-input100" data-placeholder="Last name"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="form-group wrap-input100 validate-input" data-validate="Enter an age">
+                            <input class="input100" type="text" name="age">
+                            <span class="focus-input100" data-placeholder="Age"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="wrap-input100 validate-input" data-validate="Invalid email">
+                            <input class="input100" type="text" name="email">
+                            <span class="focus-input100" data-placeholder="Email"></span>
+                        </div>
+                    </div>
+                    <div class="wrap-input100 validate-input" data-validate="Enter a password">
+                        <span class="btn-show-pass">
+                            <i class="zmdi zmdi-eye"></i>
+                        </span>
+                        <input class="input100" type="password" name="pass">
+                        <span class="focus-input100" data-placeholder="Password"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <select name="gender" id="gender" class="form-control">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="wrap-input100 validate-input" data-validate="Enter at least 1 interest">
+                            <input class="input100" type="text" name="interests">
+                            <span class="focus-input100" data-placeholder="What are you interested in?"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="wrap-input100 validate-input" data-validate="Enter at least 1 medication">
+                            <input class="input100" type="text" name="medications">
+                            <span class="focus-input100" data-placeholder="Which medications are you taking?"></span>
+                        </div>
+                    </div>
+
+                    <div class="container-signup100-form-btn">
+                        <div class="wrap-signup100-form-btn">
+                            <div class="signup100-form-bgbtn"></div>
+                            <button class="signup100-form-btn">
+                                Sign up
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="text-center p-t-10">
+                        <span class="txt1">
+                            Already have an account?
+                        </span>
+
+                        <a class="txt2" href="#">
+                            Login
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
+            ':35729/livereload.js?snipver=1"></' + 'script>')
+    </script>
+    <script>
+        var form = document.getElementById('signup-form');
+
+        function setCookie(cname, cvalue, exdays) {
+            var d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            var expires = "expires=" + d.toUTCString();
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
+
+        function setStorage(email) {
+            window.localStorage.setItem('email', email);
+        }
+        form.onsubmit = function (e) {
+            e.preventDefault();
+            //Variables to store the username and password
+            //Username: admin@gmail.com
+            //Password: admin
+            var firstname = form.firstname.value;
+            var lastname = form.lastname.value;
+            var age = form.age.value;
+            var user = form.email.value;
+            var pass = form.pass.value;
+            var gender = form.gender.value;
+            var interests = form.interests.value;
+            var medications = form.medications.value;
+            //Log to console
+            console.log(firstname);
+            console.log(lastname);
+            console.log(age);
+            console.log(user);
+            console.log(pass);
+            console.log(gender);
+            console.log(interests);
+            console.log(medications);
+            //This is the POST request
+            $.ajax({
+                type: "POST",
+                url: "http://10.21.159.187:5000/user/register",
+                data: {
+                    firstname: firstname,
+                    lastname: lastname,
+                    password: pass,
+                    age: age,
+                    email: user,
+                    gender: gender,
+                    interests: interests,
+                    medications: medications
+                },
+                success: function (msg) {
+                    console.log(msg);
+                    setStorage(user);
+                    window.location.href = '/./index.html';
+                },
+                fail: function () {
+                    console.log("Login failed");
+                }
+            });
+            form.reset();
+        };
+    </script>
+</body>
+
+</html>

@@ -75,6 +75,17 @@
 
 	<script>
 		var form = document.getElementById('login-form');
+
+		function setCookie(cname, cvalue, exdays) {
+			var d = new Date();
+			d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+			var expires = "expires=" + d.toUTCString();
+			document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+		}
+
+		function setStorage(email) {
+			window.localStorage.setItem('email', email);
+		}
 		form.onsubmit = function (e) {
 			e.preventDefault();
 			//Variables to store the username and password
@@ -95,9 +106,10 @@
 				},
 				success: function (msg) {
 					console.log(msg);
-					document.cookie = "email=" + user;
+					setStorage(user);
+					window.location.href = '/./index.html';
 				},
-				fail: function() {
+				fail: function () {
 					console.log("Login failed");
 				}
 			});
